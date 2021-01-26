@@ -13,8 +13,11 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
-export default class splash extends Component {
-  state = {};
+export default class Splash extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -33,7 +36,7 @@ export default class splash extends Component {
           <View style={styles.start}>
             <TouchableOpacity
               onPress={() => {
-                Alert.alert("Wait", "Still Working on that....");
+                this.props.navigation.navigate("login");
               }}
             >
               <Text style={{ fontSize: 17, color: "#fff" }}>

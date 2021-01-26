@@ -15,7 +15,7 @@ import Icon from "react-native-vector-icons/FontAwesome5";
 class Home extends Component {
   constructor(props) {
     super(props);
-    this.state = { user: this.props.member };
+    this.state = { user: this.props.route.member };
   }
   render() {
     return (
@@ -129,7 +129,7 @@ class Home extends Component {
                 >
                   <Feather name="message-square" size={24} color="#fff" />
                 </LinearGradient>
-                <Text style={{ fontSize: 16 }}>Chat</Text>
+                <Text style={{ fontSize: 16 }}>Issues</Text>
               </Animatable.View>
             </View>
           </View>

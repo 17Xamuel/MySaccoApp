@@ -86,9 +86,11 @@ class login extends Component {
               onPress={this.togglePassword}
             />
           </View>
-          <LinearGradient
+          <TouchableOpacity
             style={styles.button}
-            colors={["transparent", "rgba(0,0,0,0.5)"]}
+            onPress={() => {
+              this.props.navigation.navigate("bottomNav");
+            }}
           >
             <Text
               style={{
@@ -101,7 +103,7 @@ class login extends Component {
               Sign In
             </Text>
             <FontAwesome5Icon name="chevron-right" size={20} color="#fff" />
-          </LinearGradient>
+          </TouchableOpacity>
           <TouchableOpacity
             style={{ alignItems: "flex-end" }}
             onPress={() => {
