@@ -9,6 +9,7 @@ import {
   Image,
   SafeAreaView,
   Dimensions,
+  TouchableOpacity,
 } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome5";
 
@@ -77,10 +78,9 @@ class Home extends Component {
           </View>
           <View style={styles.actions}>
             <View style={styles.saveCtr}>
-              <Animatable.View
+              <TouchableOpacity
                 style={styles.save}
-                animation="fadeInRightBig"
-                duration={500}
+                onpress={() => console.log("Clicked")}
               >
                 <LinearGradient
                   style={styles.saveIconCtr}
@@ -89,8 +89,8 @@ class Home extends Component {
                   <Feather name="dollar-sign" size={24} color="#fff" />
                 </LinearGradient>
                 <Text style={{ fontSize: 16 }}>Save</Text>
-              </Animatable.View>
-              <Animatable.View
+              </TouchableOpacity>
+              <TouchableOpacity
                 style={styles.save}
                 animation="fadeInLeftBig"
                 duration={500}
@@ -102,10 +102,10 @@ class Home extends Component {
                   <Icon name="hand-holding-usd" size={24} color="#fff" />
                 </LinearGradient>
                 <Text style={{ fontSize: 16 }}>Loans</Text>
-              </Animatable.View>
+              </TouchableOpacity>
             </View>
             <View style={styles.saveCtr}>
-              <Animatable.View
+              <TouchableOpacity
                 style={styles.save}
                 animation="fadeInRightBig"
                 duration={500}
@@ -117,8 +117,8 @@ class Home extends Component {
                   <Feather name="trending-up" size={24} color="#fff" />
                 </LinearGradient>
                 <Text style={{ fontSize: 16 }}>Progress</Text>
-              </Animatable.View>
-              <Animatable.View
+              </TouchableOpacity>
+              <TouchableOpacity
                 style={styles.save}
                 animation="fadeInLeftBig"
                 duration={500}
@@ -130,7 +130,7 @@ class Home extends Component {
                   <Feather name="message-square" size={24} color="#fff" />
                 </LinearGradient>
                 <Text style={{ fontSize: 16 }}>Issues</Text>
-              </Animatable.View>
+              </TouchableOpacity>
             </View>
           </View>
         </View>

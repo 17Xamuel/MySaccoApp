@@ -9,16 +9,13 @@ const Tab = createMaterialBottomTabNavigator();
 
 function BottomTabs() {
   return (
-    <Tab.Navigator
-      initialRouteName="Home"
-      activeColor="#e91e63"
-      style={{ backgroundColor: "tomato" }}
-    >
+    <Tab.Navigator initialRouteName="Home" activeColor="#fff">
       <Tab.Screen
         name="Home"
         component={Home}
         options={{
           tabBarLabel: "Home",
+          tabBarColor: "#009387",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="home" color={color} size={26} />
           ),
@@ -29,6 +26,7 @@ function BottomTabs() {
         component={Feed}
         options={{
           tabBarLabel: "Feed",
+          tabBarColor: "#009387",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="bell" color={color} size={26} />
           ),
@@ -39,6 +37,7 @@ function BottomTabs() {
         component={Chat}
         options={{
           tabBarLabel: "Chat",
+          tabBarColor: "#009387",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={26} />
           ),
