@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 
 class Feed extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class Feed extends Component {
   }
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text>Feed Screen</Text>
         <Button title="button" />
       </View>
@@ -17,3 +17,10 @@ class Feed extends Component {
 }
 
 export default Feed;
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
