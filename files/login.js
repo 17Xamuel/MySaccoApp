@@ -94,7 +94,7 @@ class login extends Component {
           >
             <Text
               style={{
-                fontSize: 24,
+                fontSize: 25,
                 color: "#fff",
                 paddingBottom: 5,
                 marginRight: 15,
