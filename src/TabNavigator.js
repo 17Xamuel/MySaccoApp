@@ -3,6 +3,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import Home from "../files/home";
 import Feed from "../files/feed";
+import Save from "../files/save";
 import Chat from "../files/chat";
 
 const Tab = createMaterialBottomTabNavigator();
@@ -22,10 +23,10 @@ function BottomTabs() {
         }}
       />
       <Tab.Screen
-        name="Feed"
-        component={Feed}
+        name="Save"
+        component={Save}
         options={{
-          tabBarLabel: "Feed",
+          tabBarLabel: "Save",
           tabBarColor: "#009387",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="bell" color={color} size={26} />

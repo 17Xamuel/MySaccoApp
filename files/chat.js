@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button, Text, View } from "react-native";
+import { SafeAreaView, Button, Text, View, StyleSheet } from "react-native";
 
 class Chat extends Component {
   constructor(props) {
@@ -8,12 +8,20 @@ class Chat extends Component {
   }
   render() {
     return (
-      <View>
-        <Text>Chat Screen</Text>
-        <Button title="button" />
+      <View style={styles.container}>
+        <View>
+          <Text>Chat Screen</Text>
+          <Button title="button" />
+        </View>
       </View>
     );
   }
 }
-
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 export default Chat;

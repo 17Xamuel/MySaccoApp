@@ -13,7 +13,7 @@ import * as Animatable from "react-native-animatable";
 import Feather from "react-native-vector-icons/Feather";
 import FontAwesome5Icon from "react-native-vector-icons/FontAwesome5";
 
-class login extends Component {
+class Register extends Component {
   constructor(props) {
     super(props);
     this.state = { passwordVisible: true };
@@ -37,7 +37,7 @@ class login extends Component {
               paddingHorizontal: 20,
             }}
           >
-            Welcome
+            Hello There
           </Text>
           <Text
             style={{
@@ -46,7 +46,7 @@ class login extends Component {
               paddingHorizontal: 20,
             }}
           >
-            Sign in With Your Sacco ID
+            Register Under Your Sacco
           </Text>
         </Animatable.View>
         <Animatable.View style={styles.login} animation="fadeInUpBig">
@@ -59,22 +59,22 @@ class login extends Component {
               style={styles.text_input}
             />
           </View>
-          <Text style={{ fontSize: 17, marginVertical: 5 }}>Member Number</Text>
+          <Text style={{ fontSize: 17, marginVertical: 5 }}>Mobile Number</Text>
           <View style={styles.input_ctr}>
             <Feather name="user" color="#05375a" size={20} />
             <TextInput
               keyboardType="numeric"
-              placeholder="Your Member Number"
+              placeholder="Your Mobile Number"
               autoCapitalize="none"
               style={styles.text_input}
             />
           </View>
-          <Text style={{ fontSize: 17, marginVertical: 5 }}>Password</Text>
+          <Text style={{ fontSize: 17, marginVertical: 5 }}>Set Password</Text>
           <View style={styles.input_ctr}>
             <Feather name="lock" color="#05375a" size={20} />
             <TextInput
               keyboardType="visible-password"
-              placeholder="Your Password"
+              placeholder="Set Password"
               autoCapitalize="none"
               secureTextEntry={this.state.passwordVisible}
               style={styles.text_input}
@@ -100,27 +100,14 @@ class login extends Component {
                 marginRight: 15,
               }}
             >
-              Sign In
+              Register
             </Text>
             <FontAwesome5Icon name="chevron-right" size={18} color="#fff" />
           </TouchableOpacity>
           <TouchableOpacity
-            style={{ alignItems: "flex-end" }}
-            onPress={() => {
-              Alert.alert(
-                "In Process",
-                "Forgot password is not functioning at the moment..."
-              );
-            }}
-          >
-            <Text style={{ paddingRight: 5, paddingVertical: 5 }}>
-              Forgot Password?
-            </Text>
-          </TouchableOpacity>
-          <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              this.props.navigation.navigate("register");
+              this.props.navigation.navigate("login");
             }}
           >
             <Text
@@ -131,7 +118,7 @@ class login extends Component {
                 marginRight: 15,
               }}
             >
-              Register
+              Sign In
             </Text>
             <FontAwesome5Icon name="chevron-right" size={18} color="#fff" />
           </TouchableOpacity>
@@ -147,7 +134,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#009783",
   },
   login: {
-    flex: 4.5,
+    flex: 5,
     backgroundColor: "#fff",
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
@@ -179,7 +166,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     paddingVertical: 5,
-    marginVertical: 5,
+    marginVertical: 10,
   },
 });
-export default login;
+export default Register;

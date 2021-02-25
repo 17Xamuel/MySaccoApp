@@ -80,7 +80,9 @@ class Home extends Component {
             <View style={styles.saveCtr}>
               <TouchableOpacity
                 style={styles.save}
-                onpress={() => console.log("Clicked")}
+                onPress={() => {
+                  this.props.navigation.navigate("save");
+                }}
               >
                 <LinearGradient
                   style={styles.saveIconCtr}
@@ -94,6 +96,9 @@ class Home extends Component {
                 style={styles.save}
                 animation="fadeInLeftBig"
                 duration={500}
+                onPress={() => {
+                  this.props.navigation.navigate("loan");
+                }}
               >
                 <LinearGradient
                   style={styles.saveIconCtr}
